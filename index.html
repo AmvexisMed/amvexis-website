@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AMVEXIS — Guided Procedural Systems</title>
-<meta name="description" content="AMVEXIS builds guided procedural systems that bring real-time sensing, visualization and AI-assisted decision support to high-risk bedside procedures — guidance over guesswork.">
+<meta name="description" content="AMVEXIS — guided access when seconds matter. Sensing, visualization and AI-assisted guidance for critical procedures, from battlefield to bedside.">
 <style>
 :root{
   --darkblue:#1D234B; --lightblue:#2D9EAB; --midblue:#1B577A;
   --darkgray:#2B333B; --lightgray:#EEF1F4; --paper:#F7F9FB;
   --line:rgba(29,35,75,.12); --white:#fff;
   --tint:rgba(45,158,171,.07); --tint2:rgba(45,158,171,.14);
-  --nav-h:74px;
+  --nav-h:150px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 14px);}
@@ -35,7 +35,7 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
 /* NAV */
 .nav{position:sticky;top:0;z-index:200;background:#fff;border-bottom:1px solid var(--line);}
 .nav-in{max-width:1280px;margin:0 auto;padding:0 28px;height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:24px;}
-.nav-logo img{height:44px;width:auto;}
+.nav-logo img{height:130px;width:auto;}
 .nav-links{display:flex;align-items:center;gap:26px;flex-wrap:wrap;}
 .nav-links a{font-size:12.5px;font-weight:700;letter-spacing:1.6px;color:var(--darkblue);transition:color .15s;}
 .nav-links a:hover{color:var(--lightblue);}
@@ -148,6 +148,7 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
 .ecard .ea{font-size:11.5px;color:var(--darkgray);opacity:.85;line-height:1.4;}
 .ecard blockquote{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;font-style:italic;color:var(--darkgray);line-height:1.55;}
 .ecard blockquote::before{content:"\201C";color:var(--lightblue);font-size:20px;font-weight:800;font-style:normal;margin-right:2px;}
+.ecard blockquote::after{content:"\201D";color:var(--lightblue);font-size:20px;font-weight:800;font-style:normal;margin-left:2px;line-height:0;}
 
 /* TEAM */
 .team{display:grid;grid-template-columns:repeat(2,1fr);gap:30px;margin-top:8px;}
@@ -189,6 +190,8 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
   .team{grid-template-columns:1fr;}
 }
 @media(max-width:680px){
+  :root{--nav-h:86px;}
+  .nav-logo img{height:60px;}
   .nav-links{display:none;position:absolute;top:var(--nav-h);left:0;right:0;background:#fff;flex-direction:column;
     align-items:flex-start;gap:0;padding:8px 0;border-bottom:1px solid var(--line);box-shadow:0 12px 24px rgba(0,0,0,.08);}
   .nav-links.open{display:flex;}
@@ -216,8 +219,8 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
 
 <header class="hero" id="top"><div class="wrap hero-in">
   <div>
-    <h1>Guidance over <span>guesswork.</span></h1>
-    <p>AMVEXIS is building a new generation of safety-enhancing procedural technologies that combine sensing, visualization and AI-assisted decision support to transform blind interventions into guided, confident action.</p>
+    <h1>Guided access when <span>seconds matter.</span></h1>
+    <p>Sensing, visualization, and AI-assisted guidance for critical procedures &mdash; from battlefield to bedside.</p>
     <div class="hero-btns"><a class="btn btn-primary" href="#platform">Explore the platform</a><a class="btn btn-ghost" href="#validation">See the evidence</a></div>
   </div>
   <div class="hero-visual">
@@ -335,11 +338,11 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
   <div class="egroup"><div class="glabel">Civilian &amp; hospital</div>
     <div class="erow civ3">
       <div class="ecard"><div class="av"><img src="images/end-rezak.jpg" alt="Amy Rezak, M.D."></div>
-      <div class="en">Amy Rezak, M.D.</div><div class="et">Assistant Professor of Surgery</div><div class="ea">Trauma, Acute &amp; Critical Care Surgery, Duke University Hospital</div><blockquote>I see this technology replacing ALL chest tube insertion, not simply those anticipated to be difficult placements.</blockquote></div>
+      <div class="en">Amy Rezak, M.D.</div><div class="et">Assistant Professor of Surgery</div><div class="ea">Division of Trauma, Acute &amp; Critical Care Surgery<br>Duke University Hospital</div><blockquote>I see this technology replacing ALL chest tube insertion, not simply those anticipated to be difficult placements.</blockquote></div>
       <div class="ecard"><div class="av"><img src="images/end-montgomery.jpg" alt="Sean Paul Montgomery"></div>
-      <div class="en">Sean Paul Montgomery</div><div class="et">Associate Professor of Surgery</div><div class="ea">Trauma, Acute &amp; Critical Care Surgery &middot; Surgical Critical Care Fellowship</div><blockquote>I am confident that this technology will replace 100% of chest tube placements performed in emergent and urgent settings within military environments.</blockquote></div>
+      <div class="en">Sean Paul Montgomery</div><div class="et">Associate Professor of Surgery</div><div class="ea">Trauma, Acute &amp; Critical Care Surgery<br>Surgical Critical Care Fellowship &middot; Duke University Hospital</div><blockquote>I am confident that this technology will replace 100% of chest tube placements performed in emergent and urgent settings within military environments.</blockquote></div>
       <div class="ecard"><div class="av"><img src="images/end-aljurf.jpg" alt="Tareq Aljurf, M.D."></div>
-      <div class="en">Tareq Aljurf, M.D.</div><div class="et">Pulmonary &amp; Critical Care Medicine Fellow</div><div class="ea">Duke University Hospital</div><blockquote>This technology has the potential to become the new standard for chest tube placement.</blockquote></div>
+      <div class="en">Tareq Aljurf, M.D.</div><div class="et">Pulmonary &amp; Critical Care Medicine Fellow</div><div class="ea">Division of Pulmonary, Allergy &amp; Critical Care Medicine<br>Duke University Hospital</div><blockquote>This technology has the potential to become the new standard for chest tube placement.</blockquote></div>
     </div>
   </div>
 </div></section>
@@ -350,10 +353,10 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
   <h2 class="h2">Built by clinicians and engineers.</h2>
   <p class="lead">AMVEXIS was invented at the intersection of critical-care medicine and medical-device engineering.</p>
   <div class="team">
-    <div class="member"><div class="photo"><img src="images/team-peloquin.jpg" alt="Jake Peloquin, Ph.D."></div>
-      <div><h4>Jake Peloquin, Ph.D.</h4><div class="role">Chief Technology Officer &middot; Co-Inventor</div><div class="affil">Professor, Edward P. Fitts Department of Industrial and Systems Engineering, North Carolina State University</div><div class="about">[ Add a brief about paragraph for Jake here &mdash; background, research focus, and role at AMVEXIS. ]</div></div></div>
     <div class="member"><div class="photo"><img src="images/team-fernandez.jpg" alt="Joseph Fernandez-Moure, M.D., M.S."></div>
-      <div><h4>Joseph Fernandez-Moure, M.D., M.S.</h4><div class="role">Co-Inventor</div><div class="affil">Associate Professor of Surgery &mdash; Trauma, Acute &amp; Critical Care Surgery &middot; Surgical Critical Care Fellowship</div><div class="about">[ Add a brief about paragraph for Joe here &mdash; background, clinical focus, and role at AMVEXIS. ]</div></div></div>
+      <div><h4>Joseph Fernandez-Moure, M.D., M.S.</h4><div class="role">Chief Executive Officer &middot; Co-Founder</div><div class="affil">Associate Professor of Surgery &mdash; Trauma, Acute &amp; Critical Care Surgery &middot; Surgical Critical Care Fellowship</div><div class="about">[ Add a brief about paragraph for Joe here &mdash; background, clinical focus, and role at AMVEXIS. ]</div></div></div>
+    <div class="member"><div class="photo"><img src="images/team-peloquin.jpg" alt="Jake Peloquin, Ph.D."></div>
+      <div><h4>Jake Peloquin, Ph.D.</h4><div class="role">Chief Technology Officer &middot; Co-Founder</div><div class="affil">Professor, Edward P. Fitts Department of Industrial and Systems Engineering, North Carolina State University</div><div class="about">[ Add a brief about paragraph for Jake here &mdash; background, research focus, and role at AMVEXIS. ]</div></div></div>
   </div>
 </div></section>
 
