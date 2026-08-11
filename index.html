@@ -58,7 +58,8 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
 .glass{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:18px;
   -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);}
-.hero-visual{position:relative;min-height:340px;}
+.hero-visual{display:flex;justify-content:center;align-items:center;}
+.hero-figure img{max-width:100%;max-height:540px;width:auto;border-radius:16px;background:#fff;box-shadow:0 22px 55px rgba(0,0,0,.38);}
 .hero-ph{position:absolute;display:flex;align-items:center;justify-content:center;color:#9fc7ce;
   font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;text-align:center;overflow:hidden;}
 .hero-ph img{width:100%;height:100%;object-fit:cover;}
@@ -123,6 +124,7 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
 .demo{width:100%;height:320px;border-radius:16px;border:1px dashed var(--lightblue);background:var(--tint);
   display:flex;align-items:center;justify-content:center;color:var(--midblue);font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;overflow:hidden;}
 .demo img{width:100%;height:100%;object-fit:cover;}
+.demo video{height:100%;width:auto;max-width:100%;object-fit:contain;background:#0f1430;}
 .eco{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .eco-item{border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center;background:#fff;}
 .eco-logo{height:46px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;}
@@ -223,10 +225,7 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
     <p>Sensing, visualization, and AI-assisted guidance for critical procedures &mdash; from battlefield to bedside.</p>
     <div class="hero-btns"><a class="btn btn-primary" href="#platform">Explore the platform</a><a class="btn btn-ghost" href="#validation">See the evidence</a></div>
   </div>
-  <div class="hero-visual">
-    <div class="hero-ph glass hero-tablet"><span>Tablet display image</span><img src="images/hero-tablet.png" alt="" onerror="this.style.display='none'"></div>
-    <div class="hero-ph glass hero-device"><span>Device + hand image</span><img src="images/hero-device.png" alt="" onerror="this.style.display='none'"></div>
-  </div>
+  <div class="hero-visual"><div class="hero-figure"><img src="images/hero-visual.png" alt="ThoraSET tablet display with real-time depth, progress and tunneling-force readout, and the ThoraSET device with labeled features"></div></div>
 </div></header>
 
 <!-- CHALLENGE -->
@@ -298,18 +297,16 @@ h2.h2{font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--darkblue);lette
 <section class="sec" id="validation"><div class="wrap">
   <div class="kicker">Evidence &amp; Translation</div>
   <h2 class="h2">Built in the lab.<br>Tested with end users.</h2>
-  <div class="valgrid" style="margin-top:38px;">
-    <div class="demo"><span>ThoraSET demonstration image</span><img src="images/thoraset-demo.jpg" alt="" onerror="this.style.display='none'"></div>
-    <div>
-      <p class="lead" style="margin-bottom:24px;">ThoraSET has progressed through iterative engineering, mannequin and porcine evaluation, clinician testing and military end-user engagement, supported by a growing translational ecosystem.</p>
-      <div class="eco">
-        <div class="eco-item"><div class="eco-logo"><img src="images/logo-duke-university.png" alt="Invented at Duke"></div><div class="name">Invented at Duke</div><div class="sub">Technology showcase</div></div>
-        <div class="eco-item"><div class="eco-logo"><span style="font-weight:800;color:var(--midblue);font-size:14px;">SCCM C2i2</span></div><div class="name">SCCM C2i2</div><div class="sub">Critical Care Innovation Incubator</div></div>
-        <div class="eco-item"><div class="eco-logo"><img src="images/logo-nc-biotechnology-center.png" alt="NCBiotech TRG"></div><div class="name">NCBiotech TRG</div><div class="sub">Translational research funding</div></div>
-        <div class="eco-item"><div class="eco-logo"><img src="images/logo-medblue.png" alt="MedBlue Incubator"></div><div class="name">MedBlue Incubator</div><div class="sub">Company development</div></div>
-        <div class="eco-item"><div class="eco-logo"><span style="font-weight:800;color:var(--midblue);font-size:14px;">Gilhuly Accelerator</span></div><div class="name">Gilhuly Accelerator</div><div class="sub">Duke translational support</div></div>
-        <div class="eco-item"><div class="eco-logo"><img src="images/logo-duke-new-ventures.png" alt="Duke New Ventures"></div><div class="name">Duke New Ventures</div><div class="sub">Selected candidate company</div></div>
-      </div>
+  <p class="lead">ThoraSET has progressed through iterative engineering, mannequin and porcine evaluation, clinician testing and military end-user engagement, supported by a growing translational ecosystem.</p>
+  <div class="valgrid" style="margin-top:40px;">
+    <div class="demo"><video src="images/thoraset-demo.mp4" controls playsinline preload="metadata"></video></div>
+    <div class="eco" style="grid-template-columns:repeat(2,1fr);">
+      <div class="eco-item"><div class="eco-logo"><img src="images/logo-duke-university.png" alt="Invented at Duke"></div><div class="name">Invented at Duke</div><div class="sub">Technology showcase</div></div>
+      <div class="eco-item"><div class="eco-logo"><span style="font-weight:800;color:var(--midblue);font-size:14px;">SCCM C2i2</span></div><div class="name">SCCM C2i2</div><div class="sub">Critical Care Innovation Incubator</div></div>
+      <div class="eco-item"><div class="eco-logo"><img src="images/logo-nc-biotechnology-center.png" alt="NCBiotech TRG"></div><div class="name">NCBiotech TRG</div><div class="sub">Translational research funding</div></div>
+      <div class="eco-item"><div class="eco-logo"><img src="images/logo-medblue.png" alt="MedBlue Incubator"></div><div class="name">MedBlue Incubator</div><div class="sub">Company development</div></div>
+      <div class="eco-item"><div class="eco-logo"><span style="font-weight:800;color:var(--midblue);font-size:14px;">Gilhuly Accelerator</span></div><div class="name">Gilhuly Accelerator</div><div class="sub">Duke translational support</div></div>
+      <div class="eco-item"><div class="eco-logo"><img src="images/logo-duke-new-ventures.png" alt="Duke New Ventures"></div><div class="name">Duke New Ventures</div><div class="sub">Selected candidate company</div></div>
     </div>
   </div>
   <div class="partners">
